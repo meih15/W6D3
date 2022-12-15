@@ -12,7 +12,7 @@
 class Artwork < ApplicationRecord
 
   validates :image_url, presence: true, uniqueness: true 
-  validates :title, presence: true, uniqueness: { scope: :author_id,
+  validates :title, presence: true, uniqueness: { scope: :artist_id,
     message: "artist not have repeating titles"}
 
   belongs_to :artist, 
